@@ -77,6 +77,7 @@ jobs:
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
         with:
+          releaseName: 'App Name v__VERSION__'
           releaseId: ${{ needs.create-release.outputs.release_id }}
 
   publish-release:
